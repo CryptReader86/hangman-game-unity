@@ -6,6 +6,7 @@ using TMPro;
 using System;
 using System.Text.RegularExpressions;
 using System.Text;
+using UnityEngine.UI;
 
 [Serializable]
 public class RandomWord
@@ -18,19 +19,25 @@ public class Manager : MonoBehaviour
     private string _wordToGuess;
     private string _currentWord;
 
+    private StringBuilder _addedLettersStringBuilder = new StringBuilder();
+
     private int _numErrors;
 
     private List<string> _addedLetters = new List<string>();
 
     public TextMeshProUGUI hangmanText;
     public TMP_InputField letterInputText;
-    public TextMeshProUGUI messageText;
+    public TextMeshProUGUI addedLettersText;
+
+    public Image[] hangImages;
 
     private void Awake()
     {
         hangmanText.gameObject.SetActive(false);
         letterInputText.gameObject.SetActive(false);
-        messageText.gameObject.SetActive(false);
+        addedLettersText.gameObject.SetActive(false);
+
+        SetCurrentHangImage();
     }
 
     public void OnStartGameButtonPressed()
@@ -48,8 +55,6 @@ public class Manager : MonoBehaviour
                 if(!_addedLetters.Contains(letterInputText.text))
                 {
                     _addedLetters.Add(letterInputText.text);
-
-                    messageText.text = "";
 
                     List<int> letterIndexes = new List<int>();
 
@@ -80,28 +85,37 @@ public class Manager : MonoBehaviour
 
                         if(_currentWord == _wordToGuess)
                         {
-                            Debug.Log("You win!!!");
+                            letterInputText.gameObject.SetActive(false);
+
+                            _addedLettersStringBuilder.Append("<color=\"black\">" + letterInputText.text + "</color>");
                         }
+                        else
+                        {
+                            _addedLettersStringBuilder.Append("<color=\"black\">" + letterInputText.text + "</color>, ");
+                        }
+
+                        addedLettersText.text = _addedLettersStringBuilder.ToString();
                     }
                     else
                     {
                         _numErrors++;
-                        if(_numErrors >= 7)
+
+                        SetCurrentHangImage();
+
+                        if (_numErrors >= 7)
                         {
-                            Debug.Log("You lose!!!");
+                            letterInputText.gameObject.SetActive(false);
+
+                            _addedLettersStringBuilder.Append("<color=\"red\">" + letterInputText.text + "</color>");
                         }
+                        else
+                        {
+                            _addedLettersStringBuilder.Append("<color=\"red\">" + letterInputText.text + "</color>, ");
+                        }
+
+                        addedLettersText.text = _addedLettersStringBuilder.ToString();
                     }
                 }
-                else
-                {
-                    messageText.color = Color.red;
-                    messageText.text = "LETTER ALREADY ADDED";
-                }
-            }
-            else
-            {
-                messageText.color = Color.red;
-                messageText.text = "NOT A VALID LETTER";
             }
         }
 
@@ -129,14 +143,26 @@ public class Manager : MonoBehaviour
 
                 hangmanText.gameObject.SetActive(true);
                 letterInputText.gameObject.SetActive(true);
-                messageText.gameObject.SetActive(true);
+                addedLettersText.gameObject.SetActive(true);
 
                 hangmanText.text = _currentWord;
-                messageText.text = "";
+                addedLettersText.text = "";
                 letterInputText.text = "";
+
+                _addedLettersStringBuilder.Clear();
+
+                SetCurrentHangImage();
 
                 Debug.Log("word to guess: " + _wordToGuess);
             }
+        }
+    }
+
+    private void SetCurrentHangImage()
+    {
+        for(int i = 0; i < hangImages.Length; i++)
+        {
+            hangImages[i].gameObject.SetActive(i == _numErrors);
         }
     }
 }
