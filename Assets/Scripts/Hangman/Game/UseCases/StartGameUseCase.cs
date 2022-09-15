@@ -13,6 +13,9 @@ namespace Hangman.Game.UseCases
         {
             _hangman = hangman;
             _wordsGateway = wordsGateway;
+
+            _wordsGateway.RandomWord.Subscribe<string>(OnReceivingARandomWord);
+            _wordsGateway.Error.Subscribe<string>(OnReceivingAnError);
         }
 
         public void Execute()
@@ -20,6 +23,14 @@ namespace Hangman.Game.UseCases
             _hangman.Reset();
 
             _wordsGateway.GetRandomWord();
+        }
+
+        protected virtual void OnReceivingARandomWord(string randomWord)
+        {
+        }
+
+        protected virtual void OnReceivingAnError(string error)
+        {
         }
     }
 }
