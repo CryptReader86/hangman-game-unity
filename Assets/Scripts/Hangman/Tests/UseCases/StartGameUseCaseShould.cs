@@ -9,7 +9,7 @@ namespace Hangman.Tests.UseCases
 {
     public class StartGameUseCaseShould
     {
-        private IHangman _hangman;
+        private IHangmanGame _hangmanGame;
         private IWordsGateway _wordsGateway;
         private StubStartGameUseCase _startGameUseCase;
         private ReactiveProperty<string> _randomWordProperty;
@@ -19,9 +19,9 @@ namespace Hangman.Tests.UseCases
         private const string TestError = "Test Error";
 
         [Test]
-        public void Reset_The_Hangman_Model()
+        public void Reset_The_Hangman_Game()
         {
-            GivenAHangmanModel();
+            GivenAHangmanGame();
             GivenAWordsGateway();
             GivenAStartGameUseCase();
 
@@ -33,7 +33,7 @@ namespace Hangman.Tests.UseCases
         [Test]
         public void Try_To_Get_A_Random_Word()
         {
-            GivenAHangmanModel();
+            GivenAHangmanGame();
             GivenAWordsGateway();
             GivenAStartGameUseCase();
 
@@ -45,7 +45,7 @@ namespace Hangman.Tests.UseCases
         [Test]
         public void Get_A_Random_Word_When_There_Is_A_Success_Response()
         {
-            GivenAHangmanModel();
+            GivenAHangmanGame();
             GivenAWordsGatewayThatReturnsARandomWord();
             GivenAStartGameUseCase();
 
@@ -57,7 +57,7 @@ namespace Hangman.Tests.UseCases
         [Test]
         public void Get_An_Error_When_There_Is_An_Error_Report()
         {
-            GivenAHangmanModel();
+            GivenAHangmanGame();
             GivenAWordsGatewayThatReturnsAnError();
             GivenAStartGameUseCase();
 
@@ -66,9 +66,9 @@ namespace Hangman.Tests.UseCases
             ThenAnErrorWasReceived();
         }
 
-        private void GivenAHangmanModel()
+        private void GivenAHangmanGame()
         {
-            _hangman = Substitute.For<IHangman>();
+            _hangmanGame = Substitute.For<IHangmanGame>();
         }
 
         private void GivenAWordsGateway()
@@ -96,7 +96,7 @@ namespace Hangman.Tests.UseCases
 
         private void GivenAStartGameUseCase()
         {
-            _startGameUseCase = new StubStartGameUseCase(_hangman, _wordsGateway);
+            _startGameUseCase = new StubStartGameUseCase(_hangmanGame, _wordsGateway);
         }
 
         private void WhenInvoking()
@@ -120,7 +120,7 @@ namespace Hangman.Tests.UseCases
 
         private void ThenHangmanModelIsReseted()
         {
-            _hangman.Received(1).Reset();
+            _hangmanGame.Received(1).Reset();
         }
 
         private void ThenGetRandomWordIsCalled()
@@ -130,41 +130,31 @@ namespace Hangman.Tests.UseCases
 
         private void ThenARandomWordWasReceived()
         {
-            Assert.IsTrue(_startGameUseCase.WasRandomWordReceived());
+            Assert.IsTrue(_startGameUseCase.RandomWordWasReceived);
         }
 
         private void ThenAnErrorWasReceived()
         {
-            Assert.IsTrue(_startGameUseCase.WasAnErrorReceived());
+            Assert.IsTrue(_startGameUseCase.ErrorWasReceived);
         }
 
         private class StubStartGameUseCase : StartGameUseCase
         {
-            private bool _randomWordWasReceived;
-            private bool _errorWasReceived;
+            public bool RandomWordWasReceived { get; private set; }
+            public bool ErrorWasReceived { get; private set; }
 
-            public StubStartGameUseCase(IHangman hangman, IWordsGateway wordsGateway) : base(hangman, wordsGateway)
+            public StubStartGameUseCase(IHangmanGame hangman, IWordsGateway wordsGateway) : base(hangman, wordsGateway)
             {
-            }
-
-            public bool WasRandomWordReceived()
-            {
-                return _randomWordWasReceived;
-            }
-
-            public bool WasAnErrorReceived()
-            {
-                return _errorWasReceived;
             }
 
             protected override void OnReceivingARandomWord(string randomWord)
             {
-                _errorWasReceived = true;
+                RandomWordWasReceived = true;
             }
 
             protected override void OnReceivingAnError(string error)
             {
-                _errorWasReceived = true;
+                ErrorWasReceived = true;
             }
         }
     }

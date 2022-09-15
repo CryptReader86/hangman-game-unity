@@ -1,6 +1,6 @@
 namespace Hangman.Game.Entities
 {
-    public interface IHangman
+    public interface IHangmanGame
     {
         void Reset();
     }

@@ -6,12 +6,12 @@ namespace Hangman.Game.UseCases
 {
     public class StartGameUseCase
     {
-        private IHangman _hangman;
+        private IHangmanGame _hangmanGame;
         private IWordsGateway _wordsGateway;
 
-        public StartGameUseCase(IHangman hangman, IWordsGateway wordsGateway)
+        public StartGameUseCase(IHangmanGame hangmanGame, IWordsGateway wordsGateway)
         {
-            _hangman = hangman;
+            _hangmanGame = hangmanGame;
             _wordsGateway = wordsGateway;
 
             _wordsGateway.RandomWord.Subscribe<string>(OnReceivingARandomWord);
@@ -20,7 +20,7 @@ namespace Hangman.Game.UseCases
 
         public void Execute()
         {
-            _hangman.Reset();
+            _hangmanGame.Reset();
 
             _wordsGateway.GetRandomWord();
         }
