@@ -46,7 +46,7 @@ namespace Hangman.Game.Gateways
 
         private void OnError(Exception exception)
         {
-            _error.Value = exception.Message;
+            _error.Value = exception.ToString();
         }
 
         [Serializable]

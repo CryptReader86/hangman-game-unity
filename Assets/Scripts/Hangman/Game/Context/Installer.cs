@@ -17,10 +17,15 @@ namespace Hangman.Game.Context
             var startGameUseCase = new StartGameUseCase(hangmanGame, wordsGateway);
 
             var startGameButtonPresenter = new StartGameButtonPresenter(startGameUseCase);
+            var errorMessagePresenter = new ErrorMessagePresenter(startGameUseCase);
 
             Container
                 .Bind<StartGameButtonPresenter>()
                 .FromInstance(startGameButtonPresenter);
+
+            Container
+                .Bind<ErrorMessagePresenter>()
+                .FromInstance(errorMessagePresenter);
         }
     }
 }

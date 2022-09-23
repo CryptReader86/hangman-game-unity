@@ -9,10 +9,17 @@ namespace Hangman.Game.UseCases
         private IHangmanGame _hangmanGame;
         private IWordsGateway _wordsGateway;
 
+        private ReactiveProperty<string> _error;
+
+        public IReadOnlyReactiveProperty<string> Error { get; }
+
         public StartGameUseCase(IHangmanGame hangmanGame, IWordsGateway wordsGateway)
         {
             _hangmanGame = hangmanGame;
             _wordsGateway = wordsGateway;
+
+            _error = new ReactiveProperty<string>();
+            Error = new ReadOnlyReactiveProperty<string>(_error);
 
             _wordsGateway.RandomWord.Subscribe<string>(OnReceivingARandomWord);
             _wordsGateway.Error.Subscribe<string>(OnReceivingAnError);
@@ -31,6 +38,7 @@ namespace Hangman.Game.UseCases
 
         protected virtual void OnReceivingAnError(string error)
         {
+            _error.Value = error;
         }
     }
 }
