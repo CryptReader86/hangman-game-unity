@@ -23,7 +23,7 @@ namespace Hangman.Game.Entities
         public void SetWordToGuess(string randomWord)
         {
             WordToGuess = randomWord;
-            WordInProgress = new string('□', WordToGuess.Length);
+            WordInProgress = new string('□', WordToGuess?.Length ?? 0);
         }
     }
 }

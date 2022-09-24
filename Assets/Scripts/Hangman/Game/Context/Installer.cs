@@ -18,6 +18,7 @@ namespace Hangman.Game.Context
 
             var startGameButtonPresenter = new StartGameButtonPresenter(startGameUseCase);
             var errorMessagePresenter = new ErrorMessagePresenter(startGameUseCase);
+            var hangmanTextPresenter = new HangmanTextPresenter(startGameUseCase);
 
             Container
                 .Bind<StartGameButtonPresenter>()
@@ -26,6 +27,10 @@ namespace Hangman.Game.Context
             Container
                 .Bind<ErrorMessagePresenter>()
                 .FromInstance(errorMessagePresenter);
+
+            Container
+                .Bind<HangmanTextPresenter>()
+                .FromInstance(hangmanTextPresenter);
         }
     }
 }
