@@ -1,9 +1,10 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using NSubstitute;
 using Hangman.Game.Entities;
 using Hangman.Game.UseCases;
 using Hangman.Game.Gateways;
 using UniRx;
+using System;
 
 namespace Hangman.Tests.UseCases
 {
@@ -16,6 +17,7 @@ namespace Hangman.Tests.UseCases
         private ReactiveProperty<string> _errorProperty;
 
         private const string TestRandomWord = "blablabla";
+        private const string TestWordInProgress = "□□□□□□□□□";
         private const string TestError = "Test Error";
 
         [Test]
@@ -55,7 +57,7 @@ namespace Hangman.Tests.UseCases
         }
 
         [Test]
-        public void Get_An_Error_When_There_Is_An_Error_Report()
+        public void Get_An_Error_When_There_Is_An_Error_Response()
         {
             GivenAHangmanGame();
             GivenAWordsGatewayThatReturnsAnError();
@@ -66,9 +68,52 @@ namespace Hangman.Tests.UseCases
             ThenAnErrorWasReceived();
         }
 
+        [Test]
+        public void Set_The_Word_To_Guess_In_The_Model_When_There_Is_A_Success_Response()
+        {
+            GivenAHangmanGame();
+            GivenAWordsGatewayThatReturnsARandomWord();
+            GivenAStartGameUseCase();
+
+            WhenInvokingAndSendingARandomWord(TestRandomWord);
+
+            ThenWordToGuessIsSettedInTheModel(TestRandomWord);
+        }
+
+        [Test]
+        public void Set_The_Word_In_Progress_When_There_Is_A_Success_Response()
+        {
+            GivenAHangmanGameWithAWordInProgress(TestWordInProgress);
+            GivenAWordsGatewayThatReturnsARandomWord();
+            GivenAStartGameUseCase();
+
+            WhenInvokingAndSendingARandomWord(TestRandomWord);
+
+            ThenWordInProgressIsSetted(TestWordInProgress);
+        }
+
+        [Test]
+        public void Set_An_Error_When_There_Is_An_Error_Response()
+        {
+            GivenAHangmanGame();
+            GivenAWordsGatewayThatReturnsAnError();
+            GivenAStartGameUseCase();
+
+            WhenInvokingAndSendingAnError(TestError);
+
+            ThenAnErrorIsSetted(TestError);
+        }
+
         private void GivenAHangmanGame()
         {
             _hangmanGame = Substitute.For<IHangmanGame>();
+        }
+
+        private void GivenAHangmanGameWithAWordInProgress(string wordInProgress)
+        {
+            GivenAHangmanGame();
+
+            _hangmanGame.WordInProgress.Returns(wordInProgress);
         }
 
         private void GivenAWordsGateway()
@@ -138,6 +183,21 @@ namespace Hangman.Tests.UseCases
             Assert.IsTrue(_startGameUseCase.ErrorWasReceived);
         }
 
+        private void ThenWordToGuessIsSettedInTheModel(string randomWord)
+        {
+            _hangmanGame.Received(1).SetWordToGuess(randomWord);
+        }
+
+        private void ThenWordInProgressIsSetted(string wordInProgress)
+        {
+            Assert.AreEqual(wordInProgress, _startGameUseCase.WordInProgress.Value);
+        }
+
+        private void ThenAnErrorIsSetted(string error)
+        {
+            Assert.AreEqual(error, _startGameUseCase.Error.Value);
+        }
+
         private class StubStartGameUseCase : StartGameUseCase
         {
             public bool RandomWordWasReceived { get; private set; }
@@ -149,11 +209,15 @@ namespace Hangman.Tests.UseCases
 
             protected override void OnReceivingARandomWord(string randomWord)
             {
+                base.OnReceivingARandomWord(randomWord);
+
                 RandomWordWasReceived = true;
             }
 
             protected override void OnReceivingAnError(string error)
             {
+                base.OnReceivingAnError(error);
+
                 ErrorWasReceived = true;
             }
         }
