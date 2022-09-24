@@ -1,3 +1,4 @@
+﻿using System;
 using System.Collections.Generic;
 
 namespace Hangman.Game.Entities
@@ -17,6 +18,12 @@ namespace Hangman.Game.Entities
             WordInProgress = string.Empty;
             Errors = 0;
             AddedLetters.Clear();
+        }
+
+        public void SetWordToGuess(string randomWord)
+        {
+            WordToGuess = randomWord;
+            WordInProgress = new string('□', WordToGuess.Length);
         }
     }
 }

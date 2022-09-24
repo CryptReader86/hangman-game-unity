@@ -1,5 +1,6 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Hangman.Game.Entities;
+using System;
 
 namespace Hangman.Tests.Entities
 {
@@ -10,44 +11,74 @@ namespace Hangman.Tests.Entities
         [SetUp]
         public void Setup()
         {
-            _hangmanGame = new HangmanGame();
+            GivenAHangmanGame();
         }
 
         [Test]
-        public void Should_Set_Word_To_Guess_To_Empty_When_Resseted()
+        public void Set_Word_To_Guess_To_Empty_When_Resseted()
         {
-            WhenHangmanGameIsResetted();
+            WhenIsResetted();
 
             ThenWordToGuessIsResetted();
         }
 
         [Test]
-        public void Should_Set_Word_In_Progress_To_Empty_When_Resseted()
+        public void Set_Word_In_Progress_To_Empty_When_Resseted()
         {
-            WhenHangmanGameIsResetted();
+            WhenIsResetted();
 
             ThenWordInProgressIsResetted();
         }
 
         [Test]
-        public void Should_Set_Errors_To_Zero_When_Resseted()
+        public void Set_Errors_To_Zero_When_Resseted()
         {
-            WhenHangmanGameIsResetted();
+            WhenIsResetted();
 
             ThenNumberOfErrorsIsResseted();
         }
 
         [Test]
-        public void Should_Clear_Added_Letters_When_Resseted()
+        public void Clear_Added_Letters_When_Resseted()
         {
-            WhenHangmanGameIsResetted();
+            WhenIsResetted();
 
             ThenAddedLettersAreResetted();
         }
 
-        private void WhenHangmanGameIsResetted()
+        [TestCase("blue")]
+        [TestCase("shoe")]
+        [TestCase("frame")]
+        public void Set_Word_To_Guess_When_A_Random_Word_Is_Added(string randomWord)
+        {
+            WhenSettingWordToGuess(randomWord);
+
+            ThenWordToGuessIsSetted(randomWord);
+        }
+
+        [TestCase("blue", "□□□□")]
+        [TestCase("shoe", "□□□□")]
+        [TestCase("frame", "□□□□□")]
+        public void Set_Word_In_Progress_To_Initial_State_When_A_Random_Word_Is_Added(string randomWord, string initialWordInProgress)
+        {
+            WhenSettingWordToGuess(randomWord);
+
+            ThenInitialWordInProgressIsSetted(initialWordInProgress);
+        }
+
+        private void GivenAHangmanGame()
+        {
+            _hangmanGame = new HangmanGame();
+        }
+
+        private void WhenIsResetted()
         {
             _hangmanGame.Reset();
+        }
+
+        private void WhenSettingWordToGuess(string randomWord)
+        {
+            _hangmanGame.SetWordToGuess(randomWord);
         }
 
         private void ThenWordToGuessIsResetted()
@@ -68,6 +99,16 @@ namespace Hangman.Tests.Entities
         private void ThenAddedLettersAreResetted()
         {
             Assert.AreEqual(_hangmanGame.AddedLetters.Count, 0);
+        }
+
+        private void ThenWordToGuessIsSetted(string randomWord)
+        {
+            Assert.AreEqual(randomWord, _hangmanGame.WordToGuess);
+        }
+
+        private void ThenInitialWordInProgressIsSetted(string initialWordInProgress)
+        {
+            Assert.AreEqual(initialWordInProgress, _hangmanGame.WordInProgress);
         }
     }
 }
