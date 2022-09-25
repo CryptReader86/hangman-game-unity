@@ -4,7 +4,6 @@ using Hangman.Game.Entities;
 using Hangman.Game.UseCases;
 using Hangman.Game.Gateways;
 using UniRx;
-using System;
 
 namespace Hangman.Tests.UseCases
 {
