@@ -56,6 +56,16 @@ namespace Hangman.Tests.Entities
             ThenWordToGuessIsSetted(randomWord);
         }
 
+        [TestCase("Blue", "blue")]
+        [TestCase("sHOe", "shoe")]
+        [TestCase("fRAME", "frame")]
+        public void Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added(string randomWordWithCaps, string expectedWord)
+        {
+            WhenSettingWordToGuess(randomWordWithCaps);
+
+            ThenWordToGuessIsLowercase(expectedWord);
+        }
+
         [TestCase("blue", "□□□□")]
         [TestCase("shoe", "□□□□")]
         [TestCase("frame", "□□□□□")]
@@ -109,6 +119,11 @@ namespace Hangman.Tests.Entities
         private void ThenInitialWordInProgressIsSetted(string initialWordInProgress)
         {
             Assert.AreEqual(initialWordInProgress, _hangmanGame.WordInProgress);
+        }
+
+        private void ThenWordToGuessIsLowercase(string expectedWord)
+        {
+            Assert.AreEqual(expectedWord, _hangmanGame.WordToGuess);
         }
     }
 }

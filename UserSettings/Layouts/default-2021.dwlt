@@ -34,23 +34,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 622.4
-    width: 968.8
-    height: 100.39996
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+    y: 341.6
+    width: 773.6
+    height: 381.19998
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 20}
   - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -66,12 +66,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 156.8
+    x: 100
     y: 0
-    width: 812
-    height: 622.4
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+    width: 673.6
+    height: 341.6
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -96,12 +96,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 968.8
-    height: 622.4
+    width: 773.6
+    height: 341.6
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 111
+  controlID: 98
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -117,9 +117,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 968.8
+    x: 773.6
     y: 0
-    width: 367.2
+    width: 300.80005
     height: 722.8
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
@@ -143,12 +143,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1336
+    x: 1074.4
     y: 0
-    width: 100
+    width: 361.59998
     height: 722.8
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_MinSize: {x: 500, y: 200}
   m_MaxSize: {x: 40480, y: 16192}
   vertical: 0
-  controlID: 80
+  controlID: 40
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -200,8 +200,8 @@ MonoBehaviour:
     y: 0
     width: 100
     height: 722.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -297,12 +297,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 968.8
+    width: 773.6
     height: 722.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 110
+  controlID: 97
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -320,10 +320,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 156.8
-    height: 622.4
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 100
+    height: 341.6
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -350,30 +350,30 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 513.60004
-    width: 1235
-    height: 261.8
+    y: 415.2
+    width: 772.6
+    height: 360.19998
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 687
-    splitterInitialOffset: 252.8
+    ID: 464
+    splitterInitialOffset: 238.8
     currentActiveSplitter: -1
     realSizes:
-    - 100.8
-    - 91.2
+    - 167.60002
+    - 121.999985
     relativeSizes:
-    - 0.5253456
-    - 0.47465438
+    - 0.57872933
+    - 0.42127067
     minSizes:
     - 32
     - 32
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 192
+    lastTotalSize: 289.6
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -442,7 +442,7 @@ MonoBehaviour:
       name: HangmanGameUnity
       fullName: HangmanGameUnity
       resultStatus: 1
-      duration: 0.3151245
+      duration: 0.1530272
       messages: 
       output: 
       stacktrace: 
@@ -458,7 +458,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: C:/Users/wilso/OneDrive/Documents/Projects/HangmanGameUnity/Library/ScriptAssemblies/Tests.dll
       resultStatus: 1
-      duration: 0.2603196
+      duration: 0.081638
       messages: 
       output: 
       stacktrace: 
@@ -474,7 +474,7 @@ MonoBehaviour:
       name: Hangman
       fullName: Hangman
       resultStatus: 1
-      duration: 0.2467262
+      duration: 0.0699201
       messages: 
       output: 
       stacktrace: 
@@ -490,7 +490,7 @@ MonoBehaviour:
       name: Tests
       fullName: Hangman.Tests
       resultStatus: 1
-      duration: 0.2406045
+      duration: 0.0610267
       messages: 
       output: 
       stacktrace: 
@@ -506,7 +506,7 @@ MonoBehaviour:
       name: Entities
       fullName: Hangman.Tests.Entities
       resultStatus: 1
-      duration: 0.0337565
+      duration: 0.0541664
       messages: 
       output: 
       stacktrace: 
@@ -522,7 +522,7 @@ MonoBehaviour:
       name: HangmanGameShould
       fullName: Hangman.Tests.Entities.HangmanGameShould
       resultStatus: 1
-      duration: 0.0254199
+      duration: 0.0478144
       messages: 
       output: 
       stacktrace: 
@@ -668,6 +668,73 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1012
       parentUniqueId: Tests.dll/Hangman/Tests/Entities/[Tests][Hangman.Tests.Entities.HangmanGameShould][suite]
+    - id: 1027
+      uniqueId: Tests.dll/Hangman/Tests/Entities/HangmanGameShould/[Tests][Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added][suite]
+      name: Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added
+      fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added
+      resultStatus: 1
+      duration: 0.0378189
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1015
+      parentUniqueId: Tests.dll/Hangman/Tests/Entities/[Tests][Hangman.Tests.Entities.HangmanGameShould][suite]
+    - id: 1024
+      uniqueId: Tests.dll/Hangman/Tests/Entities/HangmanGameShould/Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added/[Tests][Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("Blue","blue")]
+      name: Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("Blue","blue")
+      fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("Blue","blue")
+      resultStatus: 1
+      duration: 0.016914
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1027
+      parentUniqueId: Tests.dll/Hangman/Tests/Entities/HangmanGameShould/[Tests][Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added][suite]
+    - id: 1025
+      uniqueId: Tests.dll/Hangman/Tests/Entities/HangmanGameShould/Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added/[Tests][Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("sHOe","shoe")]
+      name: Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("sHOe","shoe")
+      fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("sHOe","shoe")
+      resultStatus: 1
+      duration: 0.0002305
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1027
+      parentUniqueId: Tests.dll/Hangman/Tests/Entities/HangmanGameShould/[Tests][Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added][suite]
+    - id: 1026
+      uniqueId: Tests.dll/Hangman/Tests/Entities/HangmanGameShould/Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added/[Tests][Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("fRAME","frame")]
+      name: Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("fRAME","frame")
+      fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("fRAME","frame")
+      resultStatus: 1
+      duration: 0.0001794
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1027
+      parentUniqueId: Tests.dll/Hangman/Tests/Entities/HangmanGameShould/[Tests][Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added][suite]
     - id: 1020
       uniqueId: Tests.dll/Hangman/Tests/Entities/HangmanGameShould/[Tests][Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_When_A_Random_Word_Is_Added][suite]
       name: Set_Word_To_Guess_When_A_Random_Word_Is_Added
@@ -10131,13 +10198,13 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1061
       parentUniqueId: Zenject-UnitTests-Editor.dll/Zenject/Tests/[Zenject-UnitTests-Editor][Zenject.Tests.TestValidationSettings][suite]
-    m_ResultText: Set_An_Error_When_There_Is_An_Error_Response (0.202s)
+    m_ResultText: Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added (0.038s)
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 330}
-      m_SelectedIDs: f6136674
-      m_LastClickedID: 1952846838
-      m_ExpandedIDs: a3f0768cea3ade907d8ab19b22ff6eb88efcefd9dd876edde94986eae8a2e0f1e557abf77ea0102242a5182ea8fd9b55b418955d75ab9875ffffff7f
+      scrollPos: {x: 0, y: 461}
+      m_SelectedIDs: 0a3f47fd
+      m_LastClickedID: -45662454
+      m_ExpandedIDs: a3f0768cea3ade907d8ab19b22ff6eb88efcefd9dd876edde94986eae8a2e0f1e557abf70a3f47fd7ea0102242a5182ea8fd9b55b418955d75ab9875ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -10183,9 +10250,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 968.8
+    x: 773.60004
     y: 73.6
-    width: 365.2
+    width: 298.80005
     height: 701.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -10203,7 +10270,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Scripts/Hangman/Tests/Entities
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -10218,7 +10286,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e2620000
     m_LastClickedID: 25314
-    m_ExpandedIDs: 00000000e4680000e6680000e8680000ea680000ec680000
+    m_ExpandedIDs: 00000000ec680000ee680000f0680000f2680000f4680000f6680000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -10246,7 +10314,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000e4680000e6680000e8680000ea680000ec680000
+    m_ExpandedIDs: ffffffff00000000ec680000ee680000f0680000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: AddLetterUseCaseShould
@@ -10257,7 +10325,7 @@ MonoBehaviour:
         y: 0
         width: 0
         height: 0
-      m_UserData: 37802
+      m_UserData: 26974
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -10363,9 +10431,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1336
+    x: 1074.4
     y: 73.6
-    width: 98
+    width: 359.59998
     height: 701.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -10374,9 +10442,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 280e0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 2ac1ffff8ac2ffff82c7ffffa6caffffeecbffff48cdffffc2cdffff0ccfffff92cfffffeedfffff36e1ffff82e2fffff4e8ffff66e9ffffb6eaffff0cecffff76eeffffc8efffff04f8ffff2afbffff
+      m_ExpandedIDs: 9af2ffffeef3ffff2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -10422,8 +10490,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
-    width: 155.8
-    height: 601.4
+    width: 99
+    height: 320.6
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -10434,7 +10502,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -100, y: -25.599976}
+      snapOffsetDelta: {x: -99.2, y: -25.600006}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -10445,7 +10513,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -141, y: 149}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 41.800003, y: 0}
       snapCorner: 1
       id: unity-grid-and-snap-toolbar
       index: 1
@@ -10510,9 +10578,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 38.699997, y: -70.79999}
+      snapOffset: {x: 67.5, y: 86}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 2
+      snapCorner: 0
       id: Orientation
       index: 0
       layout: 4
@@ -10747,10 +10815,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 156.8
+    x: 100
     y: 73.6
-    width: 810
-    height: 601.4
+    width: 671.6
+    height: 320.6
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -10761,7 +10829,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1012.5, y: 570}
+  m_TargetSize: {x: 666, y: 374.5}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -10776,10 +10844,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -405
-    m_HBaseRangeMax: 405
-    m_VBaseRangeMin: -228
-    m_VBaseRangeMax: 228
+    m_HBaseRangeMin: -266.4
+    m_HBaseRangeMax: 266.4
+    m_VBaseRangeMin: -149.8
+    m_VBaseRangeMax: 149.8
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -10797,23 +10865,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 810
-      height: 580.4
+      width: 671.6
+      height: 299.6
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 405, y: 290.2}
+    m_Translation: {x: 335.8, y: 149.8}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -405
-      y: -290.2
-      width: 810
-      height: 580.4
+      x: -335.8
+      y: -149.8
+      width: 671.6
+      height: 299.6
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1012.5, y: 751.75}
+  m_LastWindowPixelSize: {x: 839.5, y: 400.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -10841,7 +10909,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 696
-    width: 967.8
+    width: 772.6
     height: 79.39996
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
