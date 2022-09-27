@@ -34,23 +34,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 341.6
-    width: 773.6
-    height: 381.19998
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
+    y: 380.8
+    width: 1010.4
+    height: 342
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
   - {fileID: 14}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -66,10 +66,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 100
+    x: 124.8
     y: 0
-    width: 673.6
-    height: 341.6
+    width: 885.60004
+    height: 380.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
@@ -96,12 +96,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 773.6
-    height: 341.6
+    width: 1010.4
+    height: 380.8
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 98
+  controlID: 118
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -117,9 +117,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 773.6
+    x: 1010.4
     y: 0
-    width: 300.80005
+    width: 321.59998
     height: 722.8
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
@@ -143,12 +143,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1074.4
+    x: 1332
     y: 0
-    width: 361.59998
+    width: 104
     height: 722.8
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_MinSize: {x: 500, y: 200}
   m_MaxSize: {x: 40480, y: 16192}
   vertical: 0
-  controlID: 40
+  controlID: 133
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -297,12 +297,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 773.6
+    width: 1010.4
     height: 722.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 97
+  controlID: 117
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -320,8 +320,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 100
-    height: 341.6
+    width: 124.8
+    height: 380.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
@@ -350,20 +350,20 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 415.2
-    width: 772.6
-    height: 360.19998
+    y: 388
+    width: 1009.4
+    height: 387.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 464
+    ID: 138
     splitterInitialOffset: 238.8
     currentActiveSplitter: -1
     realSizes:
-    - 167.60002
-    - 121.999985
+    - 183.19998
+    - 133.6
     relativeSizes:
     - 0.57872933
     - 0.42127067
@@ -373,7 +373,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 289.6
+    lastTotalSize: 316.8
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -441,9 +441,9 @@ MonoBehaviour:
       uniqueId: '[HangmanGameUnity][suite]'
       name: HangmanGameUnity
       fullName: HangmanGameUnity
-      resultStatus: 1
-      duration: 0.1530272
-      messages: 
+      resultStatus: 2
+      duration: 0.0980292
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -457,9 +457,9 @@ MonoBehaviour:
       uniqueId: '[Tests.dll][suite]'
       name: Tests.dll
       fullName: C:/Users/wilso/OneDrive/Documents/Projects/HangmanGameUnity/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 1
-      duration: 0.081638
-      messages: 
+      resultStatus: 2
+      duration: 0.0479386
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -473,9 +473,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Hangman][suite]
       name: Hangman
       fullName: Hangman
-      resultStatus: 1
-      duration: 0.0699201
-      messages: 
+      resultStatus: 2
+      duration: 0.0425544
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -489,9 +489,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/Hangman/[Tests][suite]
       name: Tests
       fullName: Hangman.Tests
-      resultStatus: 1
-      duration: 0.0610267
-      messages: 
+      resultStatus: 2
+      duration: 0.0374929
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -921,9 +921,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/Hangman/Tests/[Tests][Hangman.Tests.UseCases][suite]
       name: UseCases
       fullName: Hangman.Tests.UseCases
-      resultStatus: 1
-      duration: 0.2336452
-      messages: 
+      resultStatus: 2
+      duration: 0.0329347
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -933,6 +933,45 @@ MonoBehaviour:
       categories: []
       parentId: 1005
       parentUniqueId: Tests.dll/Hangman/[Tests][suite]
+    - id: 1001
+      uniqueId: Tests.dll/Hangman/Tests/UseCases/[Tests][Hangman.Tests.UseCases.AddCharacterUseCaseShould][suite]
+      name: AddCharacterUseCaseShould
+      fullName: Hangman.Tests.UseCases.AddCharacterUseCaseShould
+      resultStatus: 2
+      duration: 0.0273436
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1037
+      parentUniqueId: Tests.dll/Hangman/Tests/[Tests][Hangman.Tests.UseCases][suite]
+    - id: 1002
+      uniqueId: Tests.dll/Hangman/Tests/UseCases/AddCharacterUseCaseShould/[Tests][Hangman.Tests.UseCases.AddCharacterUseCaseShould.Send_Error_When_Added_Character_Is_Not_A_Letter]
+      name: Send_Error_When_Added_Character_Is_Not_A_Letter
+      fullName: Hangman.Tests.UseCases.AddCharacterUseCaseShould.Send_Error_When_Added_Character_Is_Not_A_Letter
+      resultStatus: 2
+      duration: 0.0084061
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 
+      stacktrace: "  at Hangman.Tests.UseCases.AddCharacterUseCaseShould.Send_Error_When_Added_Character_Is_Not_A_Letter
+        () [0x00012] in C:\\Users\\wilso\\OneDrive\\Documents\\Projects\\HangmanGameUnity\\Assets\\Scripts\\Hangman\\Tests\\UseCases\\AddCharacterUseCaseShould.cs:17
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <c2a97e0383e8404c9fc0ae19d58f57f1>:0 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/Hangman/Tests/UseCases/[Tests][Hangman.Tests.UseCases.AddCharacterUseCaseShould][suite]
     - id: 1001
       uniqueId: Tests.dll/Hangman/Tests/UseCases/[Tests][Hangman.Tests.UseCases.StartGameUseCaseShould][suite]
       name: StartGameUseCaseShould
@@ -10198,13 +10237,18 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1061
       parentUniqueId: Zenject-UnitTests-Editor.dll/Zenject/Tests/[Zenject-UnitTests-Editor][Zenject.Tests.TestValidationSettings][suite]
-    m_ResultText: Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added (0.038s)
+    m_ResultText: 'AddCharacterUseCaseShould (0.027s)
+
+      ---
+
+      One or more
+      child tests had errors'
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 461}
-      m_SelectedIDs: 0a3f47fd
-      m_LastClickedID: -45662454
-      m_ExpandedIDs: a3f0768cea3ade907d8ab19b22ff6eb88efcefd9dd876edde94986eae8a2e0f1e557abf70a3f47fd7ea0102242a5182ea8fd9b55b418955d75ab9875ffffff7f
+      scrollPos: {x: 0, y: 398.0011}
+      m_SelectedIDs: 88851bfa
+      m_LastClickedID: -98859640
+      m_ExpandedIDs: a3f0768cea3ade907d8ab19b22ff6eb88efcefd9dd876edde94986eae8a2e0f1e557abf788851bfa0a3f47fd7ea0102242a5182ea8fd9b55b418955d75ab9875ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -10250,9 +10294,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 773.60004
+    x: 1010.4
     y: 73.6
-    width: 298.80005
+    width: 319.59998
     height: 701.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -10271,7 +10315,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Hangman/Tests/Entities
+    - Assets/Scripts/Hangman/Game/UseCases
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -10286,7 +10330,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e2620000
     m_LastClickedID: 25314
-    m_ExpandedIDs: 00000000ec680000ee680000f0680000f2680000f4680000f6680000
+    m_ExpandedIDs: 00000000ee680000f0680000f2680000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -10314,21 +10358,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000ec680000ee680000f0680000
+    m_ExpandedIDs: ffffffff00000000ee680000f0680000f26800002c6900003c6900003e690000406900004669000058690000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: AddLetterUseCaseShould
-      m_OriginalName: AddLetterUseCaseShould
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 26974
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -10431,9 +10475,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1074.4
+    x: 1332
     y: 73.6
-    width: 359.59998
+    width: 102
     height: 701.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -10442,9 +10486,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 280e0000
+      m_SelectedIDs: 80100000
       m_LastClickedID: 0
-      m_ExpandedIDs: 9af2ffffeef3ffff2afbffff
+      m_ExpandedIDs: 40efffff60efffff2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -10490,8 +10534,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
-    width: 99
-    height: 320.6
+    width: 123.8
+    height: 359.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -10502,7 +10546,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -99.2, y: -25.600006}
+      snapOffsetDelta: {x: -100, y: -25.600006}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -10513,7 +10557,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -141, y: 149}
-      snapOffsetDelta: {x: 41.800003, y: 0}
+      snapOffsetDelta: {x: 17, y: 0}
       snapCorner: 1
       id: unity-grid-and-snap-toolbar
       index: 1
@@ -10578,9 +10622,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 67.5, y: 86}
+      snapOffset: {x: -33.300003, y: 86}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 1
       id: Orientation
       index: 0
       layout: 4
@@ -10815,10 +10859,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 100
+    x: 124.8
     y: 73.6
-    width: 671.6
-    height: 320.6
+    width: 883.60004
+    height: 359.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -10829,7 +10873,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 666, y: 374.5}
+  m_TargetSize: {x: 753, y: 423.5}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -10844,10 +10888,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -266.4
-    m_HBaseRangeMax: 266.4
-    m_VBaseRangeMin: -149.8
-    m_VBaseRangeMax: 149.8
+    m_HBaseRangeMin: -301.2
+    m_HBaseRangeMax: 301.2
+    m_VBaseRangeMin: -169.40001
+    m_VBaseRangeMax: 169.40001
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -10865,23 +10909,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 671.6
-      height: 299.6
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 335.8, y: 149.8}
+      width: 883.60004
+      height: 338.8
+    m_Scale: {x: 0.9999999, y: 0.9999999}
+    m_Translation: {x: 441.80002, y: 169.4}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -335.8
-      y: -149.8
-      width: 671.6
-      height: 299.6
+      x: -441.80008
+      y: -169.40001
+      width: 883.60016
+      height: 338.80002
     m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 839.5, y: 400.75}
+  m_defaultScale: 0.9999999
+  m_LastWindowPixelSize: {x: 1104.5, y: 449.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -10908,9 +10952,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 696
-    width: 772.6
-    height: 79.39996
+    y: 454.4
+    width: 1009.4
+    height: 321
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
