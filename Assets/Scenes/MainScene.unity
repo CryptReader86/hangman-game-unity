@@ -1769,8 +1769,9 @@ GameObject:
   - component: {fileID: 1700004138}
   - component: {fileID: 1700004137}
   - component: {fileID: 1700004136}
+  - component: {fileID: 1700004139}
   m_Layer: 5
-  m_Name: LetterInputField
+  m_Name: CharacterInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1859,9 +1860,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Manager, Assembly-CSharp
-        m_MethodName: OnLetterEntered
+      - m_Target: {fileID: 1700004139}
+        m_TargetAssemblyTypeName: Hangman.Game.Views.CharacterInputView, Game
+        m_MethodName: OnCharacterEntered
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1945,6 +1946,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700004134}
   m_CullTransparentMesh: 1
+--- !u!114 &1700004139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700004134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ffe1501e7ed85b4699c6c33e5d55b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  letterInputText: {fileID: 1700004136}
 --- !u!1 &1727511275
 GameObject:
   m_ObjectHideFlags: 0
