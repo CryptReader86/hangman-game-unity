@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ffe1501e7ed85b4699c6c33e5d55b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterInputText: {fileID: 1700004136}
+  characterInputText: {fileID: 1700004136}
 --- !u!1 &1727511275
 GameObject:
   m_ObjectHideFlags: 0

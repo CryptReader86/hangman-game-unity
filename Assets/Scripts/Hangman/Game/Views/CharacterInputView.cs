@@ -8,12 +8,13 @@ namespace Hangman.Game.Views
     public class CharacterInputView : MonoBehaviour
     {
         [Inject]
-        private StartGameButtonPresenter _presenter;
+        private CharacterInputPresenter _presenter;
 
-        public TMP_InputField letterInputText;
+        public TMP_InputField characterInputText;
 
         public void OnCharacterEntered()
         {
+            _presenter.OnCharacerEntered(characterInputText.text);
         }
     }
 }
