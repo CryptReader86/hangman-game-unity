@@ -8,7 +8,7 @@ namespace Hangman.Game.Entities
         public string WordToGuess { get; private set; }
         public string WordInProgress { get; private set; }
 
-        public IList<char> AddedLetters { get; } = new List<char>();
+        public IList<char> AddedCharacters { get; } = new List<char>();
 
         public int Errors { get; private set; }
 
@@ -17,13 +17,18 @@ namespace Hangman.Game.Entities
             WordToGuess = string.Empty;
             WordInProgress = string.Empty;
             Errors = 0;
-            AddedLetters.Clear();
+            AddedCharacters.Clear();
         }
 
         public void SetWordToGuess(string randomWord)
         {
             WordToGuess = randomWord?.ToLower();
             WordInProgress = new string('□', WordToGuess?.Length ?? 0);
+        }
+
+        public void TryToAddCharacter(char characterToAdd)
+        {
+            AddedCharacters.Add(characterToAdd);
         }
     }
 }

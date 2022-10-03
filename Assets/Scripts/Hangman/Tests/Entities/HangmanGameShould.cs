@@ -39,11 +39,11 @@ namespace Hangman.Tests.Entities
         }
 
         [Test]
-        public void Clear_Added_Letters_When_Resseted()
+        public void Clear_Added_Charcters_When_Resseted()
         {
             WhenIsResetted();
 
-            ThenAddedLettersAreResetted();
+            ThenAddedCharactersAreResetted();
         }
 
         [TestCase("blue")]
@@ -76,6 +76,16 @@ namespace Hangman.Tests.Entities
             ThenInitialWordInProgressIsSetted(initialWordInProgress);
         }
 
+        [Test]
+        public void Add_A_Character()
+        {
+            char characterToAdd = 'a';
+
+            _hangmanGame.TryToAddCharacter(characterToAdd);
+
+            Assert.IsTrue(_hangmanGame.AddedCharacters.Contains(characterToAdd));
+        }
+
         private void GivenAHangmanGame()
         {
             _hangmanGame = new HangmanGame();
@@ -106,9 +116,9 @@ namespace Hangman.Tests.Entities
             Assert.AreEqual(_hangmanGame.Errors, 0);
         }
 
-        private void ThenAddedLettersAreResetted()
+        private void ThenAddedCharactersAreResetted()
         {
-            Assert.AreEqual(_hangmanGame.AddedLetters.Count, 0);
+            Assert.AreEqual(_hangmanGame.AddedCharacters.Count, 0);
         }
 
         private void ThenWordToGuessIsSetted(string randomWord)
