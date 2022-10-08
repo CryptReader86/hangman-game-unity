@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Hangman.Game.Entities
 {
@@ -28,7 +27,10 @@ namespace Hangman.Game.Entities
 
         public void TryToAddCharacter(char characterToAdd)
         {
-            AddedCharacters.Add(char.ToLowerInvariant(characterToAdd));
+            if(!AddedCharacters.Contains(characterToAdd))
+            {
+                AddedCharacters.Add(char.ToLowerInvariant(characterToAdd));
+            }
         }
     }
 }
