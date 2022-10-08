@@ -76,14 +76,26 @@ namespace Hangman.Tests.Entities
             ThenInitialWordInProgressIsSetted(initialWordInProgress);
         }
 
-        [Test]
-        public void Add_A_Character()
+        [TestCase('a')]
+        [TestCase('\'')]
+        [TestCase('0')]
+        public void Add_A_Character(char characterToAdd)
         {
-            char characterToAdd = 'a';
-
             _hangmanGame.TryToAddCharacter(characterToAdd);
 
             Assert.IsTrue(_hangmanGame.AddedCharacters.Contains(characterToAdd));
+        }
+
+        [TestCase('A', 'a')]
+        [TestCase('\'', '\'')]
+        [TestCase('0', '0')]
+        [TestCase('Z', 'z')]
+        [TestCase('c', 'c')]
+        public void Convert_To_Lowercase_An_Added_Character(char characterToAdd, char characterExpected)
+        {
+            _hangmanGame.TryToAddCharacter(characterToAdd);
+
+            Assert.IsTrue(_hangmanGame.AddedCharacters.Contains(characterExpected));
         }
 
         private void GivenAHangmanGame()

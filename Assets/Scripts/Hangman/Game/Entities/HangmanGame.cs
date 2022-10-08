@@ -22,13 +22,13 @@ namespace Hangman.Game.Entities
 
         public void SetWordToGuess(string randomWord)
         {
-            WordToGuess = randomWord?.ToLower();
+            WordToGuess = randomWord?.ToLowerInvariant();
             WordInProgress = new string('□', WordToGuess?.Length ?? 0);
         }
 
         public void TryToAddCharacter(char characterToAdd)
         {
-            AddedCharacters.Add(characterToAdd);
+            AddedCharacters.Add(char.ToLowerInvariant(characterToAdd));
         }
     }
 }
