@@ -9,12 +9,6 @@ namespace Hangman.Tests.Entities
     {
         private HangmanGame _hangmanGame;
 
-        [SetUp]
-        public void Setup()
-        {
-            
-        }
-
         [Test]
         public void Set_Word_To_Guess_To_Empty_When_Resseted()
         {
@@ -64,7 +58,7 @@ namespace Hangman.Tests.Entities
 
             WhenSettingWordToGuess(randomWord);
 
-            ThenWordToGuessIsSetted(randomWord);
+            ThenWordToGuessIs(randomWord);
         }
 
         [TestCase("Blue", "blue")]
@@ -82,13 +76,13 @@ namespace Hangman.Tests.Entities
         [TestCase("blue", "□□□□")]
         [TestCase("shoe", "□□□□")]
         [TestCase("frame", "□□□□□")]
-        public void Set_Word_In_Progress_To_Initial_State_When_A_Random_Word_Is_Added(string randomWord, string initialWordInProgress)
+        public void Set_Word_In_Progress_To_Initial_State_When_A_Random_Word_Is_Added(string randomWord, string wordInProgress)
         {
             GivenAHangmanGame();
 
             WhenSettingWordToGuess(randomWord);
 
-            ThenInitialWordInProgressIsSetted(initialWordInProgress);
+            ThenWordInProgressIs(wordInProgress);
         }
 
         [TestCase('a')]
@@ -127,6 +121,18 @@ namespace Hangman.Tests.Entities
             ThenTheCharacterWasAddedOnlyOneTime(characterToAdd);
         }
 
+        [TestCase("Arial", 'A', "a□□a□")]
+        [TestCase("BECAUSE", 'E', "□e□□□□e")]
+        [TestCase("nothing", 't', "□□t□□□□")]
+        public void Add_Character_To_The_Word_In_Progress_When_The_Word_To_Guess_Contains_It(string randomWord, char characterToAdd, string wordInProgress)
+        {
+            GivenAHangmanGameWithAWordToGuess(randomWord);
+
+            WhenAddingACharacter(characterToAdd);
+
+            ThenWordInProgressIs(wordInProgress);
+        }
+
         private void GivenAHangmanGame()
         {
             _hangmanGame = new HangmanGame();
@@ -137,6 +143,12 @@ namespace Hangman.Tests.Entities
             GivenAHangmanGame();
 
             WhenAddingACharacter(characterToAdd);
+        }
+
+        private void GivenAHangmanGameWithAWordToGuess(string randomWord)
+        {
+            GivenAHangmanGame();
+            WhenSettingWordToGuess(randomWord);
         }
 
         private void WhenIsResetted()
@@ -174,14 +186,14 @@ namespace Hangman.Tests.Entities
             Assert.AreEqual(_hangmanGame.AddedCharacters.Count, 0);
         }
 
-        private void ThenWordToGuessIsSetted(string randomWord)
+        private void ThenWordToGuessIs(string randomWord)
         {
             Assert.AreEqual(randomWord, _hangmanGame.WordToGuess);
         }
 
-        private void ThenInitialWordInProgressIsSetted(string initialWordInProgress)
+        private void ThenWordInProgressIs(string wordInProgress)
         {
-            Assert.AreEqual(initialWordInProgress, _hangmanGame.WordInProgress);
+            Assert.AreEqual(wordInProgress, _hangmanGame.WordInProgress);
         }
 
         private void ThenWordToGuessIsLowercase(string expectedWord)
