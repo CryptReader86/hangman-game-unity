@@ -9,7 +9,7 @@ namespace Hangman.Game.Views
     public class HangmanTextView : MonoBehaviour
     {
         [SerializeField]
-        TextMeshProUGUI _hangmanText;
+        private TextMeshProUGUI _hangmanText;
 
         [Inject]
         private HangmanTextPresenter _presenter;

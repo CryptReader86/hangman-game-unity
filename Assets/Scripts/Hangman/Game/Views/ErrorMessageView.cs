@@ -9,7 +9,7 @@ namespace Hangman.Game.Views
     public class ErrorMessageView : MonoBehaviour
     {
         [SerializeField]
-        TextMeshProUGUI _errorText;
+        private TextMeshProUGUI _errorText;
 
         [Inject]
         private ErrorMessagePresenter _presenter;
