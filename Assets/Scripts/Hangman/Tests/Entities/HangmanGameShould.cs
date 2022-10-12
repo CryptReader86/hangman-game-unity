@@ -163,7 +163,7 @@ namespace Hangman.Tests.Entities
 
         private void WhenAddingACharacter(char characterToAdd)
         {
-            _hangmanGame.TryToAddCharacter(characterToAdd);
+            _hangmanGame.AddCharacter(characterToAdd);
         }
 
         private void ThenWordToGuessIsResetted()

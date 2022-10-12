@@ -8,6 +8,8 @@ namespace Hangman.Game.Entities
 
         void Reset();
 
-        void SetWordToGuess(string any);
+        void SetWordToGuess(string randomWord);
+
+        void AddCharacter(char characterToAdd);
     }
 }

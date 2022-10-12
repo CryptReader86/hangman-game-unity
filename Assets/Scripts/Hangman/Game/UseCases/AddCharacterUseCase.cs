@@ -1,15 +1,19 @@
-using UniRx;
+using Hangman.Game.Entities;
 
 namespace Hangman.Game.UseCases
 {
     public class AddCharacterUseCase
     {
-        private ReactiveProperty<string> _error;
+        private IHangmanGame _hangmanGame;
 
-        public IReadOnlyReactiveProperty<string> Error { get; }
+        public AddCharacterUseCase(IHangmanGame hangmanGame)
+        {
+            _hangmanGame = hangmanGame;
+        }
 
         public void Execute(char characterToAdd)
         {
+            _hangmanGame.AddCharacter(characterToAdd);
         }
     }
 }

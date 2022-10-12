@@ -30,7 +30,7 @@ namespace Hangman.Game.Entities
             _wordInProgress.Append(new string('□', WordToGuess?.Length ?? 0));
         }
 
-        public void TryToAddCharacter(char characterToAdd)
+        public void AddCharacter(char characterToAdd)
         {
             char characterToAddLowerCase = char.ToLowerInvariant(characterToAdd);
 
