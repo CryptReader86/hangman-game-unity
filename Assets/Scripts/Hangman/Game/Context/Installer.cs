@@ -15,11 +15,12 @@ namespace Hangman.Game.Context
             var wordsGateway = new WordsGateway("https://api.api-ninjas.com/v1/randomword");
 
             var startGameUseCase = new StartGameUseCase(hangmanGame, wordsGateway);
+            var addCharacterUseCase = new AddCharacterUseCase(hangmanGame);
 
             var startGameButtonPresenter = new StartGameButtonPresenter(startGameUseCase);
             var errorMessagePresenter = new ErrorMessagePresenter(startGameUseCase);
-            var hangmanTextPresenter = new HangmanTextPresenter(startGameUseCase);
-            var characterInputPresenter = new CharacterInputPresenter(startGameUseCase);
+            var hangmanTextPresenter = new HangmanTextPresenter(startGameUseCase, addCharacterUseCase);
+            var characterInputPresenter = new CharacterInputPresenter(startGameUseCase, addCharacterUseCase);
 
             Container
                 .Bind<StartGameButtonPresenter>()

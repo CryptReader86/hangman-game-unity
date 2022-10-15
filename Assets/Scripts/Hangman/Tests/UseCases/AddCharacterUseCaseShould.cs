@@ -1,4 +1,4 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Hangman.Game.Entities;
 using NSubstitute;
 using Hangman.Game.UseCases;
@@ -19,9 +19,28 @@ namespace Hangman.Tests.UseCases
             ThenACharacterWasAddedInTheHangmanGame(hangmanGame, characterToAdd);
         }
 
+        [TestCase("□a□□", 'a')]
+        public void Set_The_Word_In_Progress_When_Adding_A_Character(string wordInProgress, char characterToAdd)
+        {
+            IHangmanGame hangmanGame = GivenAHangmanGameThatReturnsAWordInProgress(wordInProgress);
+            AddCharacterUseCase addCharacterUseCase = GivenAnAddCharacterUseCase(hangmanGame);
+
+            WhenExecuting(addCharacterUseCase, characterToAdd);
+
+            ThenWordInProgressWasSetted(addCharacterUseCase, wordInProgress);
+        }
+
         private IHangmanGame GivenAHangmanGame()
         {
             return Substitute.For<IHangmanGame>();
+        }
+
+        private IHangmanGame GivenAHangmanGameThatReturnsAWordInProgress(string wordInProgress)
+        {
+            IHangmanGame hangmanGame = GivenAHangmanGame();
+            hangmanGame.WordInProgress.Returns(wordInProgress);
+
+            return hangmanGame;
         }
 
         private AddCharacterUseCase GivenAnAddCharacterUseCase(IHangmanGame hangmanGame)
@@ -37,6 +56,11 @@ namespace Hangman.Tests.UseCases
         private void ThenACharacterWasAddedInTheHangmanGame(IHangmanGame hangmanGame, char characterToAdd)
         {
             hangmanGame.Received(1).AddCharacter(characterToAdd);
+        }
+
+        private void ThenWordInProgressWasSetted(AddCharacterUseCase addCharacterUseCase, string wordInProgress)
+        {
+            Assert.AreEqual(wordInProgress, addCharacterUseCase.WordInProgress.Value);
         }
     }
 }
