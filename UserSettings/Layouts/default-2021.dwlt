@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Test Runner
+  m_Title: Hierarchy
   m_RootView: {fileID: 9}
   m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
@@ -34,23 +34,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 432
-    width: 620.8
-    height: 290.8
+    y: 448.8
+    width: 659.2
+    height: 274
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
   - {fileID: 14}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -66,10 +66,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 100
+    x: 120
     y: 0
-    width: 520.8
-    height: 432
+    width: 539.2
+    height: 448.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
@@ -96,12 +96,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 620.8
-    height: 432
+    width: 659.2
+    height: 448.8
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 34
+  controlID: 72
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -117,9 +117,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 620.8
+    x: 659.2
     y: 0
-    width: 325.60004
+    width: 242.39996
     height: 722.8
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
@@ -143,9 +143,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 946.4
+    x: 901.6
     y: 0
-    width: 260.79993
+    width: 344
     height: 722.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_MinSize: {x: 500, y: 200}
   m_MaxSize: {x: 40480, y: 16192}
   vertical: 0
-  controlID: 57
+  controlID: 66
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,9 +196,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1207.2
+    x: 1245.6
     y: 0
-    width: 328.80005
+    width: 290.40002
     height: 722.8
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -297,12 +297,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 620.8
+    width: 659.2
     height: 722.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 112
+  controlID: 71
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -320,8 +320,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 100
-    height: 432
+    width: 120
+    height: 448.8
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
@@ -350,20 +350,20 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 505.6
-    width: 619.8
-    height: 269.8
+    y: 548
+    width: 1003
+    height: 227.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 337
+    ID: 138
     splitterInitialOffset: 493.8
     currentActiveSplitter: -1
     realSizes:
-    - 160
-    - 40
+    - 124.8
+    - 32
     relativeSizes:
     - 0.7988721
     - 0.20112789
@@ -373,7 +373,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 200
+    lastTotalSize: 156.8
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -442,7 +442,7 @@ MonoBehaviour:
       name: HangmanGameUnity
       fullName: HangmanGameUnity
       resultStatus: 1
-      duration: 0.2434597
+      duration: 3.1488252
       messages: 
       output: 
       stacktrace: 
@@ -458,7 +458,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: C:/Users/wilso/OneDrive/Documents/Projects/HangmanGameUnity/Library/ScriptAssemblies/Tests.dll
       resultStatus: 1
-      duration: 0.1862918
+      duration: 3.0878823
       messages: 
       output: 
       stacktrace: 
@@ -474,7 +474,7 @@ MonoBehaviour:
       name: Hangman
       fullName: Hangman
       resultStatus: 1
-      duration: 0.1790282
+      duration: 3.0741758
       messages: 
       output: 
       stacktrace: 
@@ -490,7 +490,7 @@ MonoBehaviour:
       name: Tests
       fullName: Hangman.Tests
       resultStatus: 1
-      duration: 0.1769093
+      duration: 3.066674
       messages: 
       output: 
       stacktrace: 
@@ -506,7 +506,7 @@ MonoBehaviour:
       name: Entities
       fullName: Hangman.Tests.Entities
       resultStatus: 1
-      duration: 0.1765663
+      duration: 0.1749972
       messages: 
       output: 
       stacktrace: 
@@ -522,7 +522,7 @@ MonoBehaviour:
       name: HangmanGameShould
       fullName: Hangman.Tests.Entities.HangmanGameShould
       resultStatus: 1
-      duration: 0.1677143
+      duration: 0.1656014
       messages: 
       output: 
       stacktrace: 
@@ -538,7 +538,7 @@ MonoBehaviour:
       name: Add_A_Character
       fullName: Hangman.Tests.Entities.HangmanGameShould.Add_A_Character
       resultStatus: 1
-      duration: 0.02887
+      duration: 0.0295347
       messages: 
       output: 
       stacktrace: 
@@ -554,7 +554,7 @@ MonoBehaviour:
       name: Add_A_Character('a')
       fullName: Hangman.Tests.Entities.HangmanGameShould.Add_A_Character('a')
       resultStatus: 1
-      duration: 0.0139142
+      duration: 0.0147484
       messages: 
       output: 
       stacktrace: 
@@ -571,7 +571,7 @@ MonoBehaviour:
       name: Add_A_Character('\'')
       fullName: Hangman.Tests.Entities.HangmanGameShould.Add_A_Character('\'')
       resultStatus: 1
-      duration: 0.0001684
+      duration: 0.0002236
       messages: 
       output: 
       stacktrace: 
@@ -588,7 +588,7 @@ MonoBehaviour:
       name: Add_A_Character('0')
       fullName: Hangman.Tests.Entities.HangmanGameShould.Add_A_Character('0')
       resultStatus: 1
-      duration: 0.0000891
+      duration: 0.0001795
       messages: 
       output: 
       stacktrace: 
@@ -605,7 +605,7 @@ MonoBehaviour:
       name: Add_Character_To_The_Word_In_Progress_When_The_Word_To_Guess_Contains_It
       fullName: Hangman.Tests.Entities.HangmanGameShould.Add_Character_To_The_Word_In_Progress_When_The_Word_To_Guess_Contains_It
       resultStatus: 1
-      duration: 0.0227984
+      duration: 0.0228948
       messages: 
       output: 
       stacktrace: 
@@ -621,7 +621,7 @@ MonoBehaviour:
       name: "Add_Character_To_The_Word_In_Progress_When_The_Word_To_Guess_Contains_It(\"Arial\",'A',\"a\u25A1\u25A1a\u25A1\")"
       fullName: "Hangman.Tests.Entities.HangmanGameShould.Add_Character_To_The_Word_In_Progress_When_The_Word_To_Guess_Contains_It(\"Arial\",'A',\"a\u25A1\u25A1a\u25A1\")"
       resultStatus: 1
-      duration: 0.0050403
+      duration: 0.0048648
       messages: 
       output: 
       stacktrace: 
@@ -638,7 +638,7 @@ MonoBehaviour:
       name: "Add_Character_To_The_Word_In_Progress_When_The_Word_To_Guess_Contains_It(\"BECAUSE\",'E',\"\u25A1e\u25A1\u25A1\u25A1\u25A1e\")"
       fullName: "Hangman.Tests.Entities.HangmanGameShould.Add_Character_To_The_Word_In_Progress_When_The_Word_To_Guess_Contains_It(\"BECAUSE\",'E',\"\u25A1e\u25A1\u25A1\u25A1\u25A1e\")"
       resultStatus: 1
-      duration: 0.0003029
+      duration: 0.0002665
       messages: 
       output: 
       stacktrace: 
@@ -655,7 +655,7 @@ MonoBehaviour:
       name: "Add_Character_To_The_Word_In_Progress_When_The_Word_To_Guess_Contains_It(\"nothing\",'t',\"\u25A1\u25A1t\u25A1\u25A1\u25A1\u25A1\")"
       fullName: "Hangman.Tests.Entities.HangmanGameShould.Add_Character_To_The_Word_In_Progress_When_The_Word_To_Guess_Contains_It(\"nothing\",'t',\"\u25A1\u25A1t\u25A1\u25A1\u25A1\u25A1\")"
       resultStatus: 1
-      duration: 0.0002442
+      duration: 0.0003528
       messages: 
       output: 
       stacktrace: 
@@ -672,7 +672,7 @@ MonoBehaviour:
       name: Clear_Added_Charcters_When_Resseted
       fullName: Hangman.Tests.Entities.HangmanGameShould.Clear_Added_Charcters_When_Resseted
       resultStatus: 1
-      duration: 0.0019706
+      duration: 0.0019392
       messages: 
       output: 
       stacktrace: 
@@ -689,7 +689,7 @@ MonoBehaviour:
       name: Convert_To_Lowercase_An_Added_Character
       fullName: Hangman.Tests.Entities.HangmanGameShould.Convert_To_Lowercase_An_Added_Character
       resultStatus: 1
-      duration: 0.0193908
+      duration: 0.0178306
       messages: 
       output: 
       stacktrace: 
@@ -705,7 +705,7 @@ MonoBehaviour:
       name: Convert_To_Lowercase_An_Added_Character('A','a')
       fullName: Hangman.Tests.Entities.HangmanGameShould.Convert_To_Lowercase_An_Added_Character('A','a')
       resultStatus: 1
-      duration: 0.0005125
+      duration: 0.0006735
       messages: 
       output: 
       stacktrace: 
@@ -722,7 +722,7 @@ MonoBehaviour:
       name: Convert_To_Lowercase_An_Added_Character('\'','\'')
       fullName: Hangman.Tests.Entities.HangmanGameShould.Convert_To_Lowercase_An_Added_Character('\'','\'')
       resultStatus: 1
-      duration: 0.00017
+      duration: 0.0002288
       messages: 
       output: 
       stacktrace: 
@@ -739,7 +739,7 @@ MonoBehaviour:
       name: Convert_To_Lowercase_An_Added_Character('0','0')
       fullName: Hangman.Tests.Entities.HangmanGameShould.Convert_To_Lowercase_An_Added_Character('0','0')
       resultStatus: 1
-      duration: 0.0002682
+      duration: 0.0001822
       messages: 
       output: 
       stacktrace: 
@@ -756,7 +756,7 @@ MonoBehaviour:
       name: Convert_To_Lowercase_An_Added_Character('Z','z')
       fullName: Hangman.Tests.Entities.HangmanGameShould.Convert_To_Lowercase_An_Added_Character('Z','z')
       resultStatus: 1
-      duration: 0.0001726
+      duration: 0.0002444
       messages: 
       output: 
       stacktrace: 
@@ -773,7 +773,7 @@ MonoBehaviour:
       name: Convert_To_Lowercase_An_Added_Character('c','c')
       fullName: Hangman.Tests.Entities.HangmanGameShould.Convert_To_Lowercase_An_Added_Character('c','c')
       resultStatus: 1
-      duration: 0.000147
+      duration: 0.0002314
       messages: 
       output: 
       stacktrace: 
@@ -790,7 +790,7 @@ MonoBehaviour:
       name: Not_Add_Duplicated_Characters
       fullName: Hangman.Tests.Entities.HangmanGameShould.Not_Add_Duplicated_Characters
       resultStatus: 1
-      duration: 0.0184438
+      duration: 0.0176324
       messages: 
       output: 
       stacktrace: 
@@ -806,7 +806,7 @@ MonoBehaviour:
       name: Not_Add_Duplicated_Characters('a')
       fullName: Hangman.Tests.Entities.HangmanGameShould.Not_Add_Duplicated_Characters('a')
       resultStatus: 1
-      duration: 0.0025871
+      duration: 0.0029022
       messages: 
       output: 
       stacktrace: 
@@ -823,7 +823,7 @@ MonoBehaviour:
       name: Set_Errors_To_Zero_When_Resseted
       fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Errors_To_Zero_When_Resseted
       resultStatus: 1
-      duration: 0.0007063
+      duration: 0.0005952
       messages: 
       output: 
       stacktrace: 
@@ -840,7 +840,7 @@ MonoBehaviour:
       name: Set_Word_In_Progress_To_Empty_When_Resseted
       fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_In_Progress_To_Empty_When_Resseted
       resultStatus: 1
-      duration: 0.0003999
+      duration: 0.0002978
       messages: 
       output: 
       stacktrace: 
@@ -857,7 +857,7 @@ MonoBehaviour:
       name: Set_Word_In_Progress_To_Initial_State_When_A_Random_Word_Is_Added
       fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_In_Progress_To_Initial_State_When_A_Random_Word_Is_Added
       resultStatus: 1
-      duration: 0.0178035
+      duration: 0.017568
       messages: 
       output: 
       stacktrace: 
@@ -873,7 +873,7 @@ MonoBehaviour:
       name: "Set_Word_In_Progress_To_Initial_State_When_A_Random_Word_Is_Added(\"blue\",\"\u25A1\u25A1\u25A1\u25A1\")"
       fullName: "Hangman.Tests.Entities.HangmanGameShould.Set_Word_In_Progress_To_Initial_State_When_A_Random_Word_Is_Added(\"blue\",\"\u25A1\u25A1\u25A1\u25A1\")"
       resultStatus: 1
-      duration: 0.0004475
+      duration: 0.0005083
       messages: 
       output: 
       stacktrace: 
@@ -890,7 +890,7 @@ MonoBehaviour:
       name: "Set_Word_In_Progress_To_Initial_State_When_A_Random_Word_Is_Added(\"shoe\",\"\u25A1\u25A1\u25A1\u25A1\")"
       fullName: "Hangman.Tests.Entities.HangmanGameShould.Set_Word_In_Progress_To_Initial_State_When_A_Random_Word_Is_Added(\"shoe\",\"\u25A1\u25A1\u25A1\u25A1\")"
       resultStatus: 1
-      duration: 0.0001552
+      duration: 0.0002256
       messages: 
       output: 
       stacktrace: 
@@ -907,7 +907,7 @@ MonoBehaviour:
       name: "Set_Word_In_Progress_To_Initial_State_When_A_Random_Word_Is_Added(\"frame\",\"\u25A1\u25A1\u25A1\u25A1\u25A1\")"
       fullName: "Hangman.Tests.Entities.HangmanGameShould.Set_Word_In_Progress_To_Initial_State_When_A_Random_Word_Is_Added(\"frame\",\"\u25A1\u25A1\u25A1\u25A1\u25A1\")"
       resultStatus: 1
-      duration: 0.0002038
+      duration: 0.0001928
       messages: 
       output: 
       stacktrace: 
@@ -924,7 +924,7 @@ MonoBehaviour:
       name: Set_Word_To_Guess_To_Empty_When_Resseted
       fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Empty_When_Resseted
       resultStatus: 1
-      duration: 0.0004759
+      duration: 0.0003632
       messages: 
       output: 
       stacktrace: 
@@ -941,7 +941,7 @@ MonoBehaviour:
       name: Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added
       fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added
       resultStatus: 1
-      duration: 0.01701
+      duration: 0.0167835
       messages: 
       output: 
       stacktrace: 
@@ -957,7 +957,7 @@ MonoBehaviour:
       name: Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("Blue","blue")
       fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("Blue","blue")
       resultStatus: 1
-      duration: 0.0005063
+      duration: 0.0004843
       messages: 
       output: 
       stacktrace: 
@@ -974,7 +974,7 @@ MonoBehaviour:
       name: Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("sHOe","shoe")
       fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("sHOe","shoe")
       resultStatus: 1
-      duration: 0.000184
+      duration: 0.0003336
       messages: 
       output: 
       stacktrace: 
@@ -991,7 +991,7 @@ MonoBehaviour:
       name: Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("fRAME","frame")
       fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_To_Lowercase_When_A_Random_Word_Is_Added("fRAME","frame")
       resultStatus: 1
-      duration: 0.0001724
+      duration: 0.0003562
       messages: 
       output: 
       stacktrace: 
@@ -1008,7 +1008,7 @@ MonoBehaviour:
       name: Set_Word_To_Guess_When_A_Random_Word_Is_Added
       fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_When_A_Random_Word_Is_Added
       resultStatus: 1
-      duration: 0.018054
+      duration: 0.0186193
       messages: 
       output: 
       stacktrace: 
@@ -1024,7 +1024,7 @@ MonoBehaviour:
       name: Set_Word_To_Guess_When_A_Random_Word_Is_Added("blue")
       fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_When_A_Random_Word_Is_Added("blue")
       resultStatus: 1
-      duration: 0.0006589
+      duration: 0.0008536
       messages: 
       output: 
       stacktrace: 
@@ -1041,7 +1041,7 @@ MonoBehaviour:
       name: Set_Word_To_Guess_When_A_Random_Word_Is_Added("shoe")
       fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_When_A_Random_Word_Is_Added("shoe")
       resultStatus: 1
-      duration: 0.0002329
+      duration: 0.0002811
       messages: 
       output: 
       stacktrace: 
@@ -1058,7 +1058,7 @@ MonoBehaviour:
       name: Set_Word_To_Guess_When_A_Random_Word_Is_Added("frame")
       fullName: Hangman.Tests.Entities.HangmanGameShould.Set_Word_To_Guess_When_A_Random_Word_Is_Added("frame")
       resultStatus: 1
-      duration: 0.0002321
+      duration: 0.0002558
       messages: 
       output: 
       stacktrace: 
@@ -1075,7 +1075,7 @@ MonoBehaviour:
       name: Gateways
       fullName: Hangman.Tests.Gateways
       resultStatus: 1
-      duration: 2.0065646
+      duration: 2.637156
       messages: 
       output: 
       stacktrace: 
@@ -1091,7 +1091,7 @@ MonoBehaviour:
       name: WordsGatewayShould
       fullName: Hangman.Tests.Gateways.WordsGatewayShould
       resultStatus: 1
-      duration: 1.9884647
+      duration: 2.613976
       messages: 
       output: 
       stacktrace: 
@@ -1107,7 +1107,7 @@ MonoBehaviour:
       name: Return_A_Random_Word_On_Success_Response
       fullName: Hangman.Tests.Gateways.WordsGatewayShould.Return_A_Random_Word_On_Success_Response
       resultStatus: 1
-      duration: 0.7997096
+      duration: 1.268398
       messages: 
       output: 
       stacktrace: 
@@ -1123,7 +1123,7 @@ MonoBehaviour:
       name: Return_A_Random_Word_On_Success_Response("https://api.api-ninjas.com/v1/randomword")
       fullName: Hangman.Tests.Gateways.WordsGatewayShould.Return_A_Random_Word_On_Success_Response("https://api.api-ninjas.com/v1/randomword")
       resultStatus: 1
-      duration: 0.7911193
+      duration: 1.2618113
       messages: 
       output: 
       stacktrace: 
@@ -1140,7 +1140,7 @@ MonoBehaviour:
       name: Return_An_Error_On_Error_Response
       fullName: Hangman.Tests.Gateways.WordsGatewayShould.Return_An_Error_On_Error_Response
       resultStatus: 1
-      duration: 1.1816105
+      duration: 1.3338562
       messages: 
       output: 
       stacktrace: 
@@ -1156,7 +1156,7 @@ MonoBehaviour:
       name: Return_An_Error_On_Error_Response("https://api.api-ninjas.com/v1/error")
       fullName: Hangman.Tests.Gateways.WordsGatewayShould.Return_An_Error_On_Error_Response("https://api.api-ninjas.com/v1/error")
       resultStatus: 1
-      duration: 0.6974646
+      duration: 0.8007243
       messages: 
       output: 
       stacktrace: 
@@ -1173,7 +1173,7 @@ MonoBehaviour:
       name: Return_An_Error_On_Error_Response("https://www.google.com/")
       fullName: Hangman.Tests.Gateways.WordsGatewayShould.Return_An_Error_On_Error_Response("https://www.google.com/")
       resultStatus: 1
-      duration: 0.4738927
+      duration: 0.5219918
       messages: 
       output: 
       stacktrace: 
@@ -1190,7 +1190,7 @@ MonoBehaviour:
       name: UseCases
       fullName: Hangman.Tests.UseCases
       resultStatus: 1
-      duration: 0.1737843
+      duration: 0.2446503
       messages: 
       output: 
       stacktrace: 
@@ -1206,7 +1206,7 @@ MonoBehaviour:
       name: AddCharacterUseCaseShould
       fullName: Hangman.Tests.UseCases.AddCharacterUseCaseShould
       resultStatus: 1
-      duration: 0.1688991
+      duration: 0.1972789
       messages: 
       output: 
       stacktrace: 
@@ -1222,7 +1222,7 @@ MonoBehaviour:
       name: Add_A_Character_In_The_Hangman_Game
       fullName: Hangman.Tests.UseCases.AddCharacterUseCaseShould.Add_A_Character_In_The_Hangman_Game
       resultStatus: 1
-      duration: 0.1625601
+      duration: 0.1628376
       messages: 
       output: 
       stacktrace: 
@@ -1238,7 +1238,7 @@ MonoBehaviour:
       name: Add_A_Character_In_The_Hangman_Game('a')
       fullName: Hangman.Tests.UseCases.AddCharacterUseCaseShould.Add_A_Character_In_The_Hangman_Game('a')
       resultStatus: 1
-      duration: 0.1474241
+      duration: 0.1540213
       messages: 
       output: 
       stacktrace: 
@@ -1250,12 +1250,45 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1003
       parentUniqueId: Tests.dll/Hangman/Tests/UseCases/AddCharacterUseCaseShould/[Tests][Hangman.Tests.UseCases.AddCharacterUseCaseShould.Add_A_Character_In_The_Hangman_Game][suite]
+    - id: 1005
+      uniqueId: Tests.dll/Hangman/Tests/UseCases/AddCharacterUseCaseShould/[Tests][Hangman.Tests.UseCases.AddCharacterUseCaseShould.Set_The_Word_In_Progress_When_Adding_A_Character][suite]
+      name: Set_The_Word_In_Progress_When_Adding_A_Character
+      fullName: Hangman.Tests.UseCases.AddCharacterUseCaseShould.Set_The_Word_In_Progress_When_Adding_A_Character
+      resultStatus: 1
+      duration: 0.0271153
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: Tests.dll/Hangman/Tests/UseCases/[Tests][Hangman.Tests.UseCases.AddCharacterUseCaseShould][suite]
+    - id: 1004
+      uniqueId: "Tests.dll/Hangman/Tests/UseCases/AddCharacterUseCaseShould/Set_The_Word_In_Progress_When_Adding_A_Character/[Tests][Hangman.Tests.UseCases.AddCharacterUseCaseShould.Set_The_Word_In_Progress_When_Adding_A_Character(\"\u25A1a\u25A1\u25A1\",'a')]"
+      name: "Set_The_Word_In_Progress_When_Adding_A_Character(\"\u25A1a\u25A1\u25A1\",'a')"
+      fullName: "Hangman.Tests.UseCases.AddCharacterUseCaseShould.Set_The_Word_In_Progress_When_Adding_A_Character(\"\u25A1a\u25A1\u25A1\",'a')"
+      resultStatus: 1
+      duration: 0.0052437
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1005
+      parentUniqueId: Tests.dll/Hangman/Tests/UseCases/AddCharacterUseCaseShould/[Tests][Hangman.Tests.UseCases.AddCharacterUseCaseShould.Set_The_Word_In_Progress_When_Adding_A_Character][suite]
     - id: 1001
       uniqueId: Tests.dll/Hangman/Tests/UseCases/[Tests][Hangman.Tests.UseCases.StartGameUseCaseShould][suite]
       name: StartGameUseCaseShould
       fullName: Hangman.Tests.UseCases.StartGameUseCaseShould
       resultStatus: 1
-      duration: 0.1750821
+      duration: 0.0358866
       messages: 
       output: 
       stacktrace: 
@@ -1271,7 +1304,7 @@ MonoBehaviour:
       name: Get_A_Random_Word_When_There_Is_A_Success_Response
       fullName: Hangman.Tests.UseCases.StartGameUseCaseShould.Get_A_Random_Word_When_There_Is_A_Success_Response
       resultStatus: 1
-      duration: 0.1543545
+      duration: 0.0086639
       messages: 
       output: 
       stacktrace: 
@@ -1288,7 +1321,7 @@ MonoBehaviour:
       name: Get_An_Error_When_There_Is_An_Error_Response
       fullName: Hangman.Tests.UseCases.StartGameUseCaseShould.Get_An_Error_When_There_Is_An_Error_Response
       resultStatus: 1
-      duration: 0.0013221
+      duration: 0.0013377
       messages: 
       output: 
       stacktrace: 
@@ -1305,7 +1338,7 @@ MonoBehaviour:
       name: Reset_The_Hangman_Game
       fullName: Hangman.Tests.UseCases.StartGameUseCaseShould.Reset_The_Hangman_Game
       resultStatus: 1
-      duration: 0.004204
+      duration: 0.0011539
       messages: 
       output: 
       stacktrace: 
@@ -1322,24 +1355,7 @@ MonoBehaviour:
       name: Set_An_Error_When_There_Is_An_Error_Response
       fullName: Hangman.Tests.UseCases.StartGameUseCaseShould.Set_An_Error_When_There_Is_An_Error_Response
       resultStatus: 1
-      duration: 0.0010635
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/Hangman/Tests/UseCases/[Tests][Hangman.Tests.UseCases.StartGameUseCaseShould][suite]
-    - id: 1007
-      uniqueId: Tests.dll/Hangman/Tests/UseCases/StartGameUseCaseShould/[Tests][Hangman.Tests.UseCases.StartGameUseCaseShould.Set_The_Word_In_Progress_When_There_Is_A_Success_Response]
-      name: Set_The_Word_In_Progress_When_There_Is_A_Success_Response
-      fullName: Hangman.Tests.UseCases.StartGameUseCaseShould.Set_The_Word_In_Progress_When_There_Is_A_Success_Response
-      resultStatus: 1
-      duration: 0.0012311
+      duration: 0.001252
       messages: 
       output: 
       stacktrace: 
@@ -1356,7 +1372,7 @@ MonoBehaviour:
       name: Set_The_Word_To_Guess_In_The_Model_When_There_Is_A_Success_Response
       fullName: Hangman.Tests.UseCases.StartGameUseCaseShould.Set_The_Word_To_Guess_In_The_Model_When_There_Is_A_Success_Response
       resultStatus: 1
-      duration: 0.0020346
+      duration: 0.0013707
       messages: 
       output: 
       stacktrace: 
@@ -1373,7 +1389,7 @@ MonoBehaviour:
       name: Try_To_Get_A_Random_Word
       fullName: Hangman.Tests.UseCases.StartGameUseCaseShould.Try_To_Get_A_Random_Word
       resultStatus: 1
-      duration: 0.0013256
+      duration: 0.0012388
       messages: 
       output: 
       stacktrace: 
@@ -10515,13 +10531,13 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1061
       parentUniqueId: Zenject-UnitTests-Editor.dll/Zenject/Tests/[Zenject-UnitTests-Editor][Zenject.Tests.TestValidationSettings][suite]
-    m_ResultText: AddCharacterUseCaseShould (0.169s)
+    m_ResultText: Tests.dll (3.088s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 88851bfa
-      m_LastClickedID: -98859640
-      m_ExpandedIDs: 7d8ab19b1e17c9ce8efcefd9e557abf788851bfa7ea01022ffffff7f
+      m_SelectedIDs: e557abf7
+      m_LastClickedID: -139765787
+      m_ExpandedIDs: dd876eddffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -10567,9 +10583,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 620.8
+    x: 659.2
     y: 73.6
-    width: 323.60004
+    width: 240.39996
     height: 701.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -10587,7 +10603,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Scripts/Hangman/Game/Presenters
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -10602,7 +10619,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e2620000
     m_LastClickedID: 25314
-    m_ExpandedIDs: 000000000c270000f8680000fa680000fc680000fe68000000690000026900000469000006690000086900000a6900000c6900000e69000010690000
+    m_ExpandedIDs: 000000000c270000f8680000fa680000fc680000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -10630,18 +10647,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000000c270000f8680000fa680000fc680000
+    m_ExpandedIDs: ffffffff000000000c270000f8680000fa680000fc68000040690000446900004669000048690000546900005e690000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: AddCharacterUseCase
-      m_OriginalName: AddCharacterUseCase
+      m_Name: ErrorMessagePresenter
+      m_OriginalName: ErrorMessagePresenter
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10708
+      m_UserData: 3136
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -10706,9 +10723,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1207.2001
+    x: 1245.6
     y: 73.6
-    width: 327.80005
+    width: 289.40002
     height: 701.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -10747,9 +10764,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 946.4
+    x: 901.60004
     y: 73.6
-    width: 258.79993
+    width: 342
     height: 701.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -10758,9 +10775,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 406a0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 88eeffffccf4ffff72f7ffff2afbffff
+      m_ExpandedIDs: b0670000f0670000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -10806,8 +10823,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
-    width: 99
-    height: 411
+    width: 119
+    height: 427.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -10818,7 +10835,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -99.2, y: -25.600006}
+      snapOffsetDelta: {x: -100, y: -25.600006}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -10829,7 +10846,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -141, y: 149}
-      snapOffsetDelta: {x: 41.800003, y: 0}
+      snapOffsetDelta: {x: 21.800003, y: 0}
       snapCorner: 1
       id: unity-grid-and-snap-toolbar
       index: 1
@@ -10894,9 +10911,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 67.5, y: 86}
+      snapOffset: {x: -34.1, y: 86}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 1
       id: Orientation
       index: 0
       layout: 4
@@ -11132,9 +11149,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 505.6
-    width: 619.8
-    height: 269.8
+    y: 522.4
+    width: 658.2
+    height: 253
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -11159,10 +11176,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 100
+    x: 120
     y: 73.6
-    width: 518.8
-    height: 411
+    width: 537.2
+    height: 427.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -11175,7 +11192,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 648.5, y: 365}
+  m_TargetSize: {x: 671.5, y: 378}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -11190,10 +11207,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -259.4
-    m_HBaseRangeMax: 259.4
-    m_VBaseRangeMin: -146
-    m_VBaseRangeMax: 146
+    m_HBaseRangeMin: -268.6
+    m_HBaseRangeMax: 268.6
+    m_VBaseRangeMin: -151.2
+    m_VBaseRangeMax: 151.2
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -11211,23 +11228,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 518.8
-      height: 390
+      width: 537.2
+      height: 406.8
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 259.4, y: 195}
+    m_Translation: {x: 268.6, y: 203.4}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -259.4
-      y: -195
-      width: 518.8
-      height: 390
+      x: -268.6
+      y: -203.4
+      width: 537.2
+      height: 406.8
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 648.5, y: 513.75}
+  m_LastWindowPixelSize: {x: 671.5, y: 534.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000

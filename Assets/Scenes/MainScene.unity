@@ -2103,6 +2103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1825135780}
+  - component: {fileID: 1825135781}
   m_Layer: 5
   m_Name: HangImagesContainer
   m_TagString: Untagged
@@ -2138,6 +2139,27 @@ RectTransform:
   m_AnchoredPosition: {x: -248.86, y: -36.08}
   m_SizeDelta: {x: -497.722, y: -72.15201}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1825135781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825135779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b09d5000e8bf84887a65d8f3930c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hangImages:
+  - {fileID: 1222317427}
+  - {fileID: 372943166}
+  - {fileID: 1689011983}
+  - {fileID: 1019420337}
+  - {fileID: 1089718685}
+  - {fileID: 1591055908}
+  - {fileID: 935194965}
+  - {fileID: 1452624683}
 --- !u!1 &1831467320
 GameObject:
   m_ObjectHideFlags: 0
