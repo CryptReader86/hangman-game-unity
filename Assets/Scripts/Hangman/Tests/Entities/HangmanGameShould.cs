@@ -133,6 +133,16 @@ namespace Hangman.Tests.Entities
             ThenWordInProgressIs(wordInProgress);
         }
 
+        [TestCase("nothing", 'z', 1)]
+        public void Increment_The_Errors_Count_When_Added_Character_Is_Not_In_The_Word_To_Guess(string randomWord, char characterToAdd, int expectedErrors)
+        {
+            GivenAHangmanGameWithAWordToGuess(randomWord);
+
+            WhenAddingACharacter(characterToAdd);
+
+            ThenNumOfErrorsIsIncreasedTo(expectedErrors);
+        }
+
         private void GivenAHangmanGame()
         {
             _hangmanGame = new HangmanGame();
@@ -212,6 +222,11 @@ namespace Hangman.Tests.Entities
                 _hangmanGame.AddedCharacters.Where(character => character == characterToAdd).Select(character => character).Count();
 
             Assert.AreEqual(1, characterOccurences);
+        }
+
+        private void ThenNumOfErrorsIsIncreasedTo(int expectedErrors)
+        {
+            Assert.AreEqual(expectedErrors, _hangmanGame.Errors);
         }
     }
 }

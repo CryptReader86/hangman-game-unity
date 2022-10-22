@@ -51,13 +51,19 @@ namespace Hangman.Game.Entities
 
         private void AddCharacterToWordInProgress(char characterToAddLowerCase)
         {
+            bool isLetterFoundInWordToGuess = false;
+
             for (int i = 0; i < WordToGuess?.Length; i++)
             {
                 if (WordToGuess[i] == characterToAddLowerCase)
                 {
+                    isLetterFoundInWordToGuess = true;
+
                     _wordInProgress[i] = characterToAddLowerCase;
                 }
             }
+
+            if (!isLetterFoundInWordToGuess) Errors++;
         }
     }
 }

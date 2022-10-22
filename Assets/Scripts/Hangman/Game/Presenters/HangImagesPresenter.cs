@@ -9,12 +9,13 @@ namespace Hangman.Game.Presenters
 
         public IReadOnlyReactiveProperty<int> Errors { get; }
 
-        public HangImagesPresenter(StartGameUseCase startGameUseCase)
+        public HangImagesPresenter(StartGameUseCase startGameUseCase, AddCharacterUseCase addCharacterUseCase)
         {
             _errors = new ReactiveProperty<int>();
             Errors = new ReadOnlyReactiveProperty<int>(_errors);
 
             startGameUseCase.Errors.Subscribe(errors => _errors.Value = errors);
+            addCharacterUseCase.Errors.Subscribe(errors => _errors.Value = errors);
         }
     }
 }
