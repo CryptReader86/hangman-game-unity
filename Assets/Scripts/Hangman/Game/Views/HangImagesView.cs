@@ -16,7 +16,7 @@ namespace Hangman.Game.Views
 
         private void Start()
         {
-            _presenter.NumErrors.Subscribe(SetCurrentHangImage);
+            _presenter.Errors.Subscribe(SetCurrentHangImage);
         }
 
         private void SetCurrentHangImage(int numErrors)

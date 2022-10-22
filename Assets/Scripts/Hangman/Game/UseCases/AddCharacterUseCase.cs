@@ -8,8 +8,10 @@ namespace Hangman.Game.UseCases
         private IHangmanGame _hangmanGame;
 
         private ReactiveProperty<string> _wordInProgress;
+        private ReactiveProperty<bool> _hasWordBeenGuessed;
 
         public IReadOnlyReactiveProperty<string> WordInProgress { get; }
+        public IReadOnlyReactiveProperty<bool> HasWordBeenGuessed { get; }
 
         public AddCharacterUseCase(IHangmanGame hangmanGame)
         {
@@ -17,6 +19,9 @@ namespace Hangman.Game.UseCases
 
             _wordInProgress = new ReactiveProperty<string>();
             WordInProgress = new ReadOnlyReactiveProperty<string>(_wordInProgress);
+
+            _hasWordBeenGuessed = new ReactiveProperty<bool>();
+            HasWordBeenGuessed = new ReadOnlyReactiveProperty<bool>(_hasWordBeenGuessed);
         }
 
         public void Execute(char characterToAdd)
@@ -24,6 +29,8 @@ namespace Hangman.Game.UseCases
             _hangmanGame.AddCharacter(characterToAdd);
 
             _wordInProgress.Value = _hangmanGame.WordInProgress;
+
+            _hasWordBeenGuessed.Value = _hangmanGame.HasWordBeenGuessed();
         }
     }
 }

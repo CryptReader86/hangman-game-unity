@@ -16,17 +16,12 @@ namespace Hangman.Game.Views
 
         private void Start()
         {
-            _presenter.WordInProgress.Subscribe(OnWordInProgressChanged);
+            _presenter.ShouldShowCharacterInput.Subscribe(_characterInputText.gameObject.SetActive);
         }
 
         public void OnCharacterEntered()
         {
             _presenter.OnCharacerEntered(_characterInputText.text);
-        }
-
-        public void OnWordInProgressChanged(string wordInProgress)
-        {
-            _characterInputText.gameObject.SetActive(!string.IsNullOrEmpty(wordInProgress));
         }
     }
 }

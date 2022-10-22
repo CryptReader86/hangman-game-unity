@@ -28,6 +28,8 @@ namespace Hangman.Game.Entities
             WordToGuess = randomWord?.ToLowerInvariant();
 
             _wordInProgress.Append(new string('□', WordToGuess?.Length ?? 0));
+
+            UnityEngine.Debug.Log("Word to guess: " + WordToGuess);
         }
 
         public void AddCharacter(char characterToAdd)
@@ -40,6 +42,11 @@ namespace Hangman.Game.Entities
             AddedCharacters.Add(characterToAddLowerCase);
 
             AddCharacterToWordInProgress(characterToAddLowerCase);
+        }
+
+        public bool HasWordBeenGuessed()
+        {
+            return WordInProgress == WordToGuess;
         }
 
         private void AddCharacterToWordInProgress(char characterToAddLowerCase)

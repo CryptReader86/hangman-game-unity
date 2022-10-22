@@ -1,17 +1,20 @@
 using UniRx;
+using Hangman.Game.UseCases;
 
 namespace Hangman.Game.Presenters
 {
     public class HangImagesPresenter
     {
-        private ReactiveProperty<int> _numErrors;
+        private ReactiveProperty<int> _errors;
 
-        public IReadOnlyReactiveProperty<int> NumErrors { get; }
+        public IReadOnlyReactiveProperty<int> Errors { get; }
 
-        public HangImagesPresenter()
+        public HangImagesPresenter(StartGameUseCase startGameUseCase)
         {
-            _numErrors = new ReactiveProperty<int>();
-            NumErrors = new ReadOnlyReactiveProperty<int>(_numErrors);
+            _errors = new ReactiveProperty<int>();
+            Errors = new ReadOnlyReactiveProperty<int>(_errors);
+
+            startGameUseCase.Errors.Subscribe(errors => _errors.Value = errors);
         }
     }
 }

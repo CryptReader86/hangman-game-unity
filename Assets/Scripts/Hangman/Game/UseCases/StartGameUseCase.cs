@@ -9,9 +9,11 @@ namespace Hangman.Game.UseCases
         private IHangmanGame _hangmanGame;
         private IWordsGateway _wordsGateway;
 
+        private ReactiveProperty<int> _errors;
         private ReactiveProperty<string> _wordInProgress;
         private ReactiveProperty<string> _error;
 
+        public IReadOnlyReactiveProperty<int> Errors { get; }
         public IReadOnlyReactiveProperty<string> WordInProgress { get; }
         public IReadOnlyReactiveProperty<string> Error { get; }
 
@@ -19,6 +21,9 @@ namespace Hangman.Game.UseCases
         {
             _hangmanGame = hangmanGame;
             _wordsGateway = wordsGateway;
+
+            _errors = new ReactiveProperty<int>();
+            Errors = new ReadOnlyReactiveProperty<int>(_errors);
 
             _wordInProgress = new ReactiveProperty<string>();
             WordInProgress = new ReadOnlyReactiveProperty<string>(_wordInProgress);
@@ -33,6 +38,8 @@ namespace Hangman.Game.UseCases
         public void Execute()
         {
             _hangmanGame.Reset();
+
+            _errors.Value = _hangmanGame.Errors;
 
             _wordsGateway.GetRandomWord();
         }
