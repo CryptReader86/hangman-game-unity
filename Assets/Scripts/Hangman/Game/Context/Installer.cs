@@ -10,6 +10,8 @@ namespace Hangman.Game.Context
     {
         public override void InstallBindings()
         {
+            int errorsToLose = 7;
+
             var hangmanGame = new HangmanGame();
 
             var wordsGateway = new WordsGateway("https://api.api-ninjas.com/v1/randomword");
@@ -20,7 +22,7 @@ namespace Hangman.Game.Context
             var startGameButtonPresenter = new StartGameButtonPresenter(startGameUseCase);
             var errorMessagePresenter = new ErrorMessagePresenter(startGameUseCase);
             var hangmanTextPresenter = new HangmanTextPresenter(startGameUseCase, addCharacterUseCase);
-            var characterInputPresenter = new CharacterInputPresenter(startGameUseCase, addCharacterUseCase);
+            var characterInputPresenter = new CharacterInputPresenter(errorsToLose, startGameUseCase, addCharacterUseCase);
             var hangImagesPresenter = new HangImagesPresenter(startGameUseCase, addCharacterUseCase);
 
             Container

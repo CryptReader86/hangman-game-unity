@@ -14,7 +14,7 @@ namespace Hangman.Game.Presenters
         public IReadOnlyReactiveProperty<bool> ShouldShowCharacterInput { get; }
 
 
-        public CharacterInputPresenter(StartGameUseCase startGameUseCase, AddCharacterUseCase addCharacterUseCase)
+        public CharacterInputPresenter(int errorsToLose, StartGameUseCase startGameUseCase, AddCharacterUseCase addCharacterUseCase)
         {
             _startGameUseCase = startGameUseCase;
             _addCharacterUseCase = addCharacterUseCase;
@@ -22,8 +22,9 @@ namespace Hangman.Game.Presenters
             _shouldShowCharacterInput = new ReactiveProperty<bool>();
             ShouldShowCharacterInput = new ReadOnlyReactiveProperty<bool>(_shouldShowCharacterInput);
 
-            _startGameUseCase.WordInProgress.Subscribe(_ => SetInputVisibility());
-            _addCharacterUseCase.HasWordBeenGuessed.Subscribe(_ => SetInputVisibility());
+            _startGameUseCase.WordInProgress.Subscribe(_ => SetInputVisibility(errorsToLose));
+            _addCharacterUseCase.HasWordBeenGuessed.Subscribe(_ => SetInputVisibility(errorsToLose));
+            _addCharacterUseCase.Errors.Subscribe(_ => SetInputVisibility(errorsToLose));
         }
 
         public void OnCharacerEntered(string character)
@@ -34,12 +35,13 @@ namespace Hangman.Game.Presenters
             }
         }
 
-        private void SetInputVisibility()
+        private void SetInputVisibility(int errorsToLose)
         {
             bool isWordInProgressEmpty = string.IsNullOrEmpty(_startGameUseCase.WordInProgress.Value);
             bool hasWordBeenGuessed = _addCharacterUseCase.HasWordBeenGuessed.Value;
+            bool hasLost = _addCharacterUseCase.Errors.Value >= errorsToLose;
 
-            _shouldShowCharacterInput.Value = !(isWordInProgressEmpty || hasWordBeenGuessed);
+            _shouldShowCharacterInput.Value = !(isWordInProgressEmpty || hasWordBeenGuessed || hasLost);
         }
     }    
 }
